@@ -10,7 +10,7 @@
   <a href="https://codecov.io/gh/greymd/guacamole"><img src="https://codecov.io/gh/greymd/guacamole/branch/master/graph/badge.svg" alt="codecov" /></a>
 </p>
 
-# geomerative
+# Raindown
 
 おじさんがLINEやメールで送ってきそうな文を生成するコマンド。
 
