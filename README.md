@@ -1,16 +1,16 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/wiki/greymd/ojichat/img/ojichat_logo.png" height="178" width="485" />
-   <h4 align="center">Ojisan Nanchatte (ojichat) Generator</h2>
+  <img src="https://raw.githubusercontent.com/wiki/greymd/guacamole/img/guacamole_logo.png" height="178" width="485" />
+   <h4 align="center">Ojisan Nanchatte (guacamole) Generator</h2>
 </h1>
 
 <p align="center">
-  <a href="https://github.com/greymd/ojichat/releases/latest"><img src="https://img.shields.io/github/release/greymd/ojichat.svg" alt="Latest version" /></a>
-  <a href="https://travis-ci.org/greymd/ojichat"><img src="https://travis-ci.org/greymd/ojichat.svg?branch=master" alt="Build Status" /></a>
+  <a href="https://github.com/greymd/guacamole/releases/latest"><img src="https://img.shields.io/github/release/greymd/guacamole.svg" alt="Latest version" /></a>
+  <a href="https://travis-ci.org/greymd/guacamole"><img src="https://travis-ci.org/greymd/guacamole.svg?branch=master" alt="Build Status" /></a>
   <a href="LICENSE" alt="MIT License"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" /></a>
-  <a href="https://codecov.io/gh/greymd/ojichat"><img src="https://codecov.io/gh/greymd/ojichat/branch/master/graph/badge.svg" alt="codecov" /></a>
+  <a href="https://codecov.io/gh/greymd/guacamole"><img src="https://codecov.io/gh/greymd/guacamole/branch/master/graph/badge.svg" alt="codecov" /></a>
 </p>
 
-## なんだこれは
+# guacamole
 
 おじさんがLINEやメールで送ってきそうな文を生成するコマンド。
 
@@ -26,15 +26,15 @@ go version go1.12 linux/amd64
 インストールには Go の開発環境が必要です。
 
 ```bash
-go install github.com/greymd/ojichat@latest
+go install github.com/greymd/guacamole@latest
 ```
 
 ## 使い方
 
 ```bash
-$ ojichat -h
+$ guacamole -h
 Usage:
-  ojichat [options] [<name>]
+  guacamole [options] [<name>]
 
 Options:
   -h, --help      ヘルプを表示.
@@ -47,14 +47,14 @@ Options:
 文章は参考文献[1]で提唱される感情表現の順番で、いくつかのテンプレートの組み合わせにより自動生成がされる。
 
 ```bash
-$ ojichat
+$ guacamole
 ヤッホー😍😃れいこちゃん、元気かな⁉😜⁉️🤔オレは、近所に新しく できたラーメン屋さん🍜に行ってきたよ。味はまぁまぁだったかナ💕
 ```
 
 文言には特定の人名が含まれることもあるが、第一引数で指定可能。
 
 ```bash
-$ ojichat 山田
+$ guacamole 山田
 山田ちゃん、オハヨウ〜(^з<)😚（笑）山田ちゃんも今日も2時までお仕事かナ❓寒いけど、頑張ってね(＃￣З￣)🙂💤
 ```
 
@@ -63,7 +63,7 @@ $ ojichat 山田
 
 
 ```bash
-$ ojichat -p 3 オレとオマエと大五郎
+$ guacamole -p 3 オレとオマエと大五郎
 オレと、オマエと、大五郎ﾁｬﾝ、オッハー❗(^_^)🎵オレと、オマエと 、大五郎ﾁｬﾝにとって、素敵な、1日に、なります、ようニ😘
 ```
 
@@ -73,10 +73,10 @@ $ ojichat -p 3 オレとオマエと大五郎
 より柔軟に実際の状況を模したユースケースに対応できる。
 
 ```bash
-$ ojichat -e 10
+$ guacamole -e 10
 おはよー、！チュッ😚😘😘😃☀ 😆❗😚😆(^з<)
 
-$ ojichat -e 0
+$ guacamole -e 0
 ヤッホー。はなみちゃん、元気かな。はなみちゃんにとって素敵な1日になりますようニ。
 ```
 
@@ -84,33 +84,33 @@ $ ojichat -e 0
 これにより実際の状況を模したユースケースに(ry
 
 ```bash
-$ ojichat
+$ guacamole
 ...ご要望とかはあるのかな❗💕😚😘😜❓
 
-$ ojichat
+$ guacamole
 ...ご要望とかはあるのカナ❗🎵😆💕❓😜
 ```
 
 ## Dockerコンテナ版
-おじさんで環境を汚したくない、Goの実行環境を持っていないなどの状況でもお手軽におじさんになるために、Dockerコンテナでもojichatを用意してある ( [greymd/ojichat](https://hub.docker.com/r/greymd/ojichat) )。
+おじさんで環境を汚したくない、Goの実行環境を持っていないなどの状況でもお手軽におじさんになるために、Dockerコンテナでもguacamoleを用意してある ( [greymd/guacamole](https://hub.docker.com/r/greymd/guacamole) )。
 
 ### 使い方
 
-- `docker run --rm -i greymd/ojichat:latest` はオプション等を含めて全て `ojichat` と同じ動きをする。
+- `docker run --rm -i greymd/guacamole:latest` はオプション等を含めて全て `guacamole` と同じ動きをする。
 
 ```
-$ docker run --rm -i greymd/ojichat:latest
+$ docker run --rm -i greymd/guacamole:latest
 ヤッホー(^з<)🎵（笑）キララチャン、元気かな😜⁉️土曜日は仕事〜❗❓キララチャン😚😃♥ 💗元気、ないのかなァ(^▽^;)💦大丈夫⁉😜⁉️✋❓❓
 ```
 
-- `ojichat 坂東まりも` と同じ動きをする
+- `guacamole 坂東まりも` と同じ動きをする
 ```
-$ docker run --rm -i greymd/ojichat:latest 坂東まりも
+$ docker run --rm -i greymd/guacamole:latest 坂東まりも
 坂東まりもちゃん、久しぶり(^з<)(^з<)そういえば、昨日は例のラーメン屋さん🍜に行ってきたよ。結構いい雰囲気だったから、オススメだよ😚😚😍
 ```
 
 ## 関連ツール等 (Wiki)
-https://github.com/greymd/ojichat/wiki/Related-services-and-tools
+https://github.com/greymd/guacamole/wiki/Related-services-and-tools
 
 ## 参考文献
 
@@ -130,4 +130,4 @@ https://togetter.com/li/1111905
 | ソースコード | [MIT](./LISENCE) |
 | ロゴ | <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>|
 
-二次利用について詳しくは [Wiki > Copy and Redistribute](https://github.com/greymd/ojichat/wiki/Copy-and-Redistribute) 参照してください。
+二次利用について詳しくは [Wiki > Copy and Redistribute](https://github.com/greymd/guacamole/wiki/Copy-and-Redistribute) 参照してください。
